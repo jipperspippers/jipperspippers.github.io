@@ -22,6 +22,7 @@ const Projects = () => {
           // technologies={project.technologies}
           image={project.image}
           link={project.link}
+          videos={project.videos}
         />
       ))}
       

@@ -1,12 +1,10 @@
 import React from 'react';
 import './projects.css';
 
-const ProjectCard = ({ title, description, image, link,   technologies}) => {
-  return (
-    <div className="projectCard"> 
-
-    <a className="projectLink" href={link} target="_blank" rel="noopener noreferrer">
-        <div className="projectDetails">
+const ProjectCard = ({ title, description, image, link,   technologies, videos}) => {
+  const body = (
+    <>
+      <div className="projectDetails">
         <h3>{title}</h3>
         <p>{description}</p>
 
@@ -16,12 +14,37 @@ const ProjectCard = ({ title, description, image, link,   technologies}) => {
           ))}
         </div> */}
       </div>
-      
-      <div className="projectImageContainer"><img src={image} alt=""/></div>
 
-      </a>
+      {image && <div className="projectImageContainer"><img src={image} alt=""/></div>}
+    </>
+  );
 
-      
+  return (
+    <div className="projectCard">
+
+    {link && link !== "not available"
+      ? <a className="projectLink" href={link} target="_blank" rel="noopener noreferrer">{body}</a>
+      : body}
+
+      {videos && videos.length > 0 && (
+        <div className="projectVideos">
+          {videos.map((video, index) => (
+            <figure key={index} className="projectVideoItem">
+              <video
+                className="projectVideo"
+                src={video.src}
+                poster={video.poster}
+                controls
+                loop
+                muted
+                playsInline
+                preload="metadata"
+              />
+              {video.caption && <figcaption>{video.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

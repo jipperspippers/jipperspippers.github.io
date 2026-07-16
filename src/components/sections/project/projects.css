@@ -50,6 +50,30 @@
     }
   }
 
+  .projectVideos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 15px 15px 15px;
+  }
+
+  .projectVideoItem {
+    margin: 0;
+  }
+
+  .projectVideo {
+    width: 100%;
+    display: block;
+    background-color: #0E0F19;
+    border-radius: 4px;
+  }
+
+  .projectVideoItem figcaption {
+    color: #a8a3a2;
+    font-size: small;
+    padding-top: 5px;
+  }
+
   .projectsContainer {
     display: flex;
     flex-wrap: wrap;

@@ -2,6 +2,29 @@ import * as assets from "../assets"
 
 const projects = [
     {
+      title: "RoboSoccer Autonomous Robotics Competition Winner",
+      description: "An autonomous robot written in C++ that tracks moving targets, dodges obstacles and scores under tight latency constraints. Runs a deterministic FSM over multi-sensor telemetry with tuned PID controllers for locomotion and orientation.",
+      link: "https://github.com/jiputer/",
+      linkText: "Available upon request",
+      // Videos: drop clips into public/videos/ then list them here, e.g.
+      // { src: process.env.PUBLIC_URL + "/videos/robosoccer-goal.mp4",
+      //   poster: process.env.PUBLIC_URL + "/videos/robosoccer-goal.png",
+      //   caption: "scoring run" }
+      videos: []
+    },
+    {
+      title: "Uma Smart Vending Platform — Device Fleet Architecture",
+      description: "Co-designed a dual-app architecture (vending app + always-on watchdog/updater) on a Rockchip RK3588 running Android, so a machine stays operable through crashes and OTA updates. MQTT coordination between concurrent state machines for machine lifecycle, mode and order status, with checksum/size/magic-byte validation so a bad update can never brick a device. Kotlin, Python, AWS IoT Core/S3/KVS, RKNN.",
+      link: "",
+      linkText: "Internal work"
+    },
+    {
+      title: "Uma DevKit — Computer-Vision Tuning & Eval Platform",
+      description: "A desktop tool for tuning on-device detection/tracking parameters and running reproducible evals against ground-truth video. The pipeline ingests, runs, scores and overlays results on the video, replacing manual visual inspection. Python, Flask, React, Vite, TypeScript, TailwindCSS, pytest.",
+      link: "",
+      linkText: "Internal work"
+    },
+    {
       title: "Galaxia Bound",
       description: "Browser game made in Unity. Made along with Anthony Qin (qin2500), and Klein Harrigan (KleinKodes)",
       link: "https://qin2500.itch.io/galaxia-bound",
